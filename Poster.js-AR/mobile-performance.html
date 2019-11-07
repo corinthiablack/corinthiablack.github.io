@@ -101,65 +101,51 @@
 	//          Create a ArMarkerControls
 	////////////////////////////////////////////////////////////////////////////////
 
-	//var markerRoot = new THREE.Group
-	//scene.add(markerRoot)
-	//var artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
-		//type : 'pattern',
-		//patternUrl : THREEx.ArToolkitContext.baseURL + 'patts/A.patt'
+	var markerRoot = new THREE.Group
+	scene.add(markerRoot)
+	var artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
+		type : 'pattern',
+		patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/pattern-A.patt'
 		// patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji'
-	//})
+	})
 
 	// build a smoothedControls
-	//var smoothedRoot = new THREE.Group()
-	//scene.add(smoothedRoot)
-	//var smoothedControls = new THREEx.ArSmoothedControls(smoothedRoot, {
-		//lerpPosition: 0.4,
-		//lerpQuaternion: 0.3,
-		//lerpScale: 1,
-	//})
-	//onRenderFcts.push(function(delta){
-		//smoothedControls.update(markerRoot)
-	//})
+	var smoothedRoot = new THREE.Group()
+	scene.add(smoothedRoot)
+	var smoothedControls = new THREEx.ArSmoothedControls(smoothedRoot, {
+		lerpPosition: 0.4,
+		lerpQuaternion: 0.3,
+		lerpScale: 1,
+	})
+	onRenderFcts.push(function(delta){
+		smoothedControls.update(markerRoot)
+	})
 	//////////////////////////////////////////////////////////////////////////////////
 	//		add an object in the scene
 	//////////////////////////////////////////////////////////////////////////////////
 
-	//var arWorldRoot = smoothedRoot
+	var arWorldRoot = smoothedRoot
 
-	// add a torus -- linked to A.patt right now
-	//knotvar geometry	= new THREE.BoxGeometry(1,1,1);
-	//var material	= new THREE.MeshNormalMaterial({
-		//transparent : true,
-		//opacity: 0.5,
-		//side: THREE.DoubleSide
-	//});
-	//var mesh	= new THREE.Mesh( geometry, material );
-	//mesh.position.y	= geometry.parameters.height/2
-	//arWorldRoot.add( mesh );
+	// add a torus -- linked to Pattern-A right now
+	knotvar geometry	= new THREE.BoxGeometry(1,1,1);
+	var material	= new THREE.MeshNormalMaterial({
+		transparent : true,
+		opacity: 0.5,
+		side: THREE.DoubleSide
+	});
+	var mesh	= new THREE.Mesh( geometry, material );
+	mesh.position.y	= geometry.parameters.height/2
+	arWorldRoot.add( mesh );
 
-	//var geometry	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
-	//var material	= new THREE.MeshNormalMaterial();
-	//var mesh	= new THREE.Mesh( geometry, material );
-	//mesh.position.y	= 0.5
-	//arWorldRoot.add( mesh );
+	var geometry	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
+	var material	= new THREE.MeshNormalMaterial();
+	var mesh	= new THREE.Mesh( geometry, material );
+	mesh.position.y	= 0.5
+	arWorldRoot.add( mesh );
 
-	//onRenderFcts.push(function(){
-	//	mesh.rotation.x += 0.1
-	//})
-
-	<body style="overflow: hidden; margin:0;">
-	    <ar-scene>
-	        <ar-marker patt="patts/A.patt" content="gifs/A.gif"></ar-marker>
-	        <ar-marker patt="patts/B.patt" content="gifs/B.gif"></ar-marker>
-	        <ar-marker patt="patts/C.patt" content="gifs/C.gif"></ar-marker>
-	        <ar-marker patt="patts/D.patt" content="gifs/D.gif"></ar-marker>
-
-	        <ar-marker patt="patts/peixe.patt">
-	            <ar-content src="gifs/peixe.gif" scale="1.5 1.5" position="0 0 0" rotation="0 0 0">
-	            </ar-content>
-	        </ar-marker>
-	    </ar-scene>
-	</body>
+	onRenderFcts.push(function(){
+		mesh.rotation.x += 0.1
+	})
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the whole thing on the page
