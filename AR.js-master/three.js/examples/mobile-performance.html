@@ -131,8 +131,13 @@
 
 	var arWorldRoot = smoothedRoot
 
-	// add a torus knot
-	var geometry	= new THREE.BoxGeometry(1,1,1);
+	
+	<ar-scene>
+ 	<ar-marker patt='../data/data/pattern-B.patt' content='AR.js-master/data/data/pc1-max.gif'></ar-marker>  
+	</ar-scene>
+	
+	// add a torus -- linked to Pattern-A right now
+	knotvar geometry	= new THREE.BoxGeometry(1,1,1);
 	var material	= new THREE.MeshNormalMaterial({
 		transparent : true,
 		opacity: 0.5,
