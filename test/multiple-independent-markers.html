@@ -1,54 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 
-  <!-- add this script in order to load a large set of 3D model extensions-->
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 
-  <!--remove old link to aframe script>
+<!-- add this script in order to load a large set of 3D model extensions-->
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+<!--remove old link to aframe script>
 <script src="build/aframe.js"></script>
 <!--include aframe-ar.js>
 <script src="build/aframe-ar.js"></script-->
-  <body>
-    <a-scene
-      embedded
-      arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
-    >
-      <!-- handle unknown marker -->
-      <!-- <a-marker type='unknown'>
+
+	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<!-- handle unknown marker -->
+		<!-- <a-marker type='unknown'>
 			<a-box depth="1" height="1" width="1" position='0 0.5 0' material='opacity: 0.5; side:double; color:blue;'></a-box>
 		</a-marker> -->
 
-      <!-- handle hiro marker-->
-      <a-marker preset="hiro">
-        <a-entity
-          obj-model="obj: url(https://corinthiablack.github.io/test/models/lm2.obj);
-					 mtl: url(https://corinthiablack.github.io/test/models/lm2.obj.mtl)"
-        >
-        </a-entity>
+		<!-- handle hiro marker-->
+		<a-marker preset='hiro'>
+			<a-entity
+					 obj-model="obj: url(https://corinthiablack.github.io/test/models/lm2.obj);
+					 mtl: url(https://corinthiablack.github.io/test/models/lm2.obj.mtl)">
+			 </a-entity>
 
-        <!--a-marker preset='hiro'>
+			<!--a-marker preset='hiro'>
 				<a-obj-model src="models/lm2.obj" mtl="models/lm2.mtl"> </a-obj-model-->
-      </a-marker>
+		</a-marker>
 
-      <!-- handle kanji marker -->
-      <a-marker preset="kanji">
-        <a-box
-          position="0 0.5 0"
-          material="opacity: 0.5; side: double;color:green;"
-        >
-          <a-torus-knot
-            radius="0.26"
-            radius-tubular="0.05"
-            animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true"
-          >
-          </a-torus-knot>
-        </a-box>
-      </a-marker>
+		<!-- handle kanji marker -->
+		<a-marker preset='kanji'>
+			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
+				<a-torus-knot radius='0.26' radius-tubular='0.05'
+				animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
+				</a-torus-knot>
+			</a-box>
+		</a-marker>
 
-      <!-- add a simple camera -->
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+		<!-- add a simple camera -->
+		<a-entity camera></a-entity>
+	</a-scene>
+</body>
 </html>

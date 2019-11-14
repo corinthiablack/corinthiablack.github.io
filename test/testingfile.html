@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<DOCTYPE html>
+<!--script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
 <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs='sourceType: webcam;'>
@@ -7,8 +7,33 @@
                         <a-asset-item id="lm-obj" src="models/lm2.obj"></a-asset-item>
                         <a-asset-item id="lm-mtl" src="models/lm2.obj.mtl"></a-asset-item>
                 </a-assets>
-                <!-- Using the asset management system. -->
                 <a-entity obj-model="obj: #lm-obj; mtl: #lm-mtl"></a-entity>
                 <a-marker-camera preset='hiro'></a-marker-camera>
         </a-scene>
+</body-->
+
+<!DOCTYPE html>
+<script src="build/aframe.js"></script>
+<script src="build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		    <a-marker preset='hiro'>
+            <a-asset-item id="pc1-obj" src="models/lm2.obj"></a-asset-item>
+            <a-asset-item id="pc1-mtl" src="models/lm2.obj.mtl"></a-asset-item>
+			         <a-entity obj-model="obj: #pc1-obj; mtl:#pc1-mtl">
+			         </a-entity>
+		    </a-marker>
+
+		<!-- handle kanji marker -->
+		    <a-marker preset='kanji'>
+			       <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
+				     <a-torus-knot radius='0.26' radius-tubular='0.05' animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
+				     </a-torus-knot>
+			       </a-box>
+		    </a-marker>
+
+		<!-- add a simple camera -->
+		<a-entity camera></a-entity>
+	</a-scene>
 </body>
+</html>
