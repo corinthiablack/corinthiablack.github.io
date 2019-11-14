@@ -7,42 +7,12 @@
   <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix;'>
 
     <a-marker preset="hiro">
-        <a-assets>
-             <a-asset-item id="#pc1-obj" src="corinthiablack.github.io/test/models/lm2.obj"></a-asset-item>
-             <a-asset-item id="#pc1-mtl" src="corinthiablack.github.io/test/models/lm2.obj.mtl"></a-asset-item>
-        </a-assets>
-        <a-obj-model src="#pc1-obj" mtl="#pc1-mtl"></a-obj-model>
-      </a-marker>
-
+      <a-entity
+      obj-model="obj: url(corinthiablack.github.io/test/models/lm2.obj);
+      mtl: url(corinthiablack.github.io/test/models/lm2.obj.mtl">
+      </a-entity>
+    </a-marker>
 
     <a-entity camera></a-entity>
 </a-scene>
 </body>
-
-
-<!--DOCTYPE html>
-<script src="build/aframe.js"></script>
-<script src="build/aframe-ar.js"></script>
-<body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-		    <a-marker preset='hiro'>
-            <a-asset-item id="pc1-obj" src="models/lm2.obj"></a-asset-item>
-            <a-asset-item id="pc1-mtl" src="models/lm2.obj.mtl"></a-asset-item>
-			         <a-entity scale=".3 .3 .3" obj-model="obj: #pc1-obj; mtl:#pc1-mtl">
-			         </a-entity>
-		    </a-marker>
-        <!--scale="0.2 0.2 0.2">
-        </a-entity-->
-		<!-- handle kanji marker >
-		    <a-marker preset='kanji'>
-			       <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
-				     <a-torus-knot radius='0.26' radius-tubular='0.05' animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
-				     </a-torus-knot>
-			       </a-box>
-		    </a-marker>
-
-		<!-- add a simple camera >
-		<a-entity camera></a-entity>
-	</a-scene>
-</body>
-</html-->
