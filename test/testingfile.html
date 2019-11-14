@@ -5,10 +5,18 @@
 <body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs>
     <a-marker preset="hiro">
-        <a-entity scale="0.2 0.2 0.2"
-                obj-model="obj: {{asset('corinthiablack.github.io/test/models/lm2.obj')}};
-            mtl: {{asset('corinthiablack.github.io/test/models/lm2.obj.mtl')}}">
-        </a-entity>    </a-marker>
+      <a-assets>
+             <a-asset-item id="#pc1-obj" src="corinthiablack.github.io/test/models/lm2.obj"></a-asset-item>
+             <a-asset-item id="#pc1-mtl" src="corinthiablack.github.io/test/models/lm2.obj.mtll"></a-asset-item>
+        </a-assets>
+
+        <a-obj-model src="#pc1-obj" mtl="#pc1-mtl"></a-obj-model>
+
+
+        <!--scale="0.2 0.2 0.2">
+        </a-entity-->
+      </a-marker>
+
     <a-entity camera></a-entity>
 </a-scene>
 </body>
