@@ -5,12 +5,13 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix;'>
-
     <a-marker preset="hiro">
-      <a-entity
-      obj-model="obj: url(corinthiablack.github.io/test/models/lm2.obj);
-      mtl: url(corinthiablack.github.io/test/models/lm2.obj.mtl">
-      </a-entity>
+    <a-assets>
+      <a-asset-item id="tree-obj" src="corinthiablack.github.io/test/models/lm2.obj"></a-asset-item>
+      <a-asset-item id="tree-mtl" src="corinthiablack.github.io/test/models/lm2.obj.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
     </a-marker>
 
     <a-entity camera></a-entity>
