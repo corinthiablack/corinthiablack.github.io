@@ -3,29 +3,13 @@
 <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
 
-<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-
-  <a-marker preset="hiro">
-      <a-assets>
-      <a-asset-item id="pc1-obj" src="corinthiablack.github.io/test/models/lm2.obj"></a-asset-item>
-      <a-asset-item id="pc1-mtl" src="corinthiablack.github.io/test/models/lm2.obj.mtl"></a-asset-item>
-      </a-assets>
-
-      <a-entity obj-model="obj: #pc1-obj; mtl: #pc1-mtl"> </a-entity>
-  </a-marker>
-
-    <a-entity camera></a-entity>
-</a-scene>
-</body>
-</html>
-
-<!--body style='margin : 0px; overflow: hidden;'>
+<body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs renderer="precision: medium">
-        <a-marker id="memarker" type="pattern" url="../static/patterns/pattern-earth.patt" vidhandler>
-            <a-entity obj-model="obj: url(../static/models/{}.obj); mtl: url(../static/models/{}.mtl)" scale="0.1 0.1 0.1"> </a-entity>
+        <a-marker present="hiro">
+            <a-entity obj-model="obj: url(models/lm2.obj); mtl: url(models/lm2.obj.mtl)" scale="0.1 0.1 0.1"> </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
 </body>
 
-</html-->
+</html>
