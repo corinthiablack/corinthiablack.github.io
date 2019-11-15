@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<script src="build/aframe.min.js"></script>
-<script src="build/aframe-ar.js"></script>
+
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+
+<!-- add this script in order to load a large set of 3D model extensions-->
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
-<body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
   <a-marker preset="hiro">
-      <a-asset-item id="tree-obj" src="corinthiablack.github.io/test/models/lm2.obj"></a-asset-item>
-      <a-asset-item id="tree-mtl" src="corinthiablack.github.io/test/models/lm2.obj.mtl"></a-asset-item>
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl">
+      <a-asset-item id="pc1-obj" src="corinthiablack.github.io/test/models/lm2.obj"></a-asset-item>
+      <a-asset-item id="pc1-mtl" src="corinthiablack.github.io/test/models/lm2.obj.mtl"></a-asset-item>
+      <a-entity obj-model="obj: #pc1-obj; mtl: #pc1-mtl">
       </a-entity>
   </a-marker>
 
     <a-entity camera></a-entity>
 </a-scene>
 </body>
+</html>
