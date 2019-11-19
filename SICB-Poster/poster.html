@@ -8,20 +8,24 @@
     <a-scene embedded arj='sourceType:webcam; detectionMode: mono_and_matrix;'>
 
       <a-marker type='pattern' url='https://corinthiablack.github.io/SICB-Poster/patt/pattern-A.patt'>
-        <!--a-box material='color: white;' scale="1.25 0 1.25"></a-box-->
+        <!--Can be Hex color as well-->
+        <a-entity geometry="primitive: box" material="shader: flat; color: #808080" scale="1.25 0 1.25"></a-entity>
         <a-entity
-          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/pc1min.gltf)" position="2 1 1" rotation="0 0 0" scale="0.15 0.15 0.15">
+          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/pc1min.gltf)"
+          position="0 2 0" rotation="0 0 0" scale="0.1 0.1 0.1"
+          animation="property: rotation; dur: 9000; to: 360 0 0; loop: true">
         </a-entity>
       </a-marker>
 
 <!-- USE THIS WHEN DONE!!! -->
     <a-marker type='pattern' url='https://corinthiablack.github.io/SICB-Poster/patt/pattern-B.patt'>
-        <!--a-box material='color: white;' scale="1.25 0 1.25"></a-box-->
-        <a-entity
-          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/pc1max.gltf)" position="2 1 1" rotation="0 0 0" scale="0.15 0.15 0.15">
+      <a-entity geometry="primitive: box" material="shader: flat; color: #808080" scale="1.25 0 1.25"></a-entity>
+      <a-entity
+          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/pc1max.gltf)"
+          position="0 2 0" rotation="0 0 0" scale="0.1 0.1 0.1"
+          animation="property: rotation; dur: 9000; to: 360 0 0; loop: true">
         </a-entity>
       </a-marker>
-
 
       <a-entity camera></a-entity>
     </a-scene>
