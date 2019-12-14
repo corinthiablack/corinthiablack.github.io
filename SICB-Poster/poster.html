@@ -9,23 +9,41 @@
 
       <a-marker type='pattern' url='https://corinthiablack.github.io/SICB-Poster/patt/pattern-A.patt'>
         <!--Can be Hex color as well-->
-        <a-entity geometry="primitive: box" material="shader: flat; color: white" scale="1.25 0 1.25"></a-entity>
+        <a-entity geometry="primitive: box" material="shader: flat; color: #4C4C4C" scale="1.25 0 1.25"></a-entity>
         <a-entity
-          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/pc1min.gltf)"
-          position="0 2 0" rotation="0 0 0" scale="0.1 0.1 0.1"
-          animation="property: rotation; dur: 9000; to: 360 0 0; loop: true">
+          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/PC2max.gltf)"
+          position="0 1 0" rotation="0 0 0" scale="0.1 0.1 0.1"
+          animation="property: rotation; dur: 8000; to: 360 0 0; loop: true">
         </a-entity>
       </a-marker>
 
 <!-- USE THIS WHEN DONE!!! -->
     <a-marker type='pattern' url='https://corinthiablack.github.io/SICB-Poster/patt/pattern-B.patt'>
-      <a-entity geometry="primitive: box" material="shader: flat; color: white" scale="1.25 0 1.25"></a-entity>
+      <a-entity geometry="primitive: box" material="shader: flat; color: #CDCDCD" scale="1.25 0 1.25"></a-entity>
       <a-entity
-          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/pc1max.gltf)"
-          position="0 2 0" rotation="0 0 0" scale="0.1 0.1 0.1"
-          animation="property: rotation; dur: 9000; to: 360 0 0; loop: true">
+          gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/PC2min.gltf)"
+          position="0 1 0" rotation="0 0 0" scale="0.1 0.1 0.1"
+          animation="property: rotation; dur: 8000; to: 360 0 0; loop: true">
         </a-entity>
       </a-marker>
+
+    <a-marker type='pattern' url='https://corinthiablack.github.io/SICB-Poster/patt/pattern-C.patt'>
+        <a-entity geometry="primitive: box" material="shader: flat; color: #CDCDCD" scale="1.25 0 1.25"></a-entity>
+        <a-entity
+            gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/PC1min.gltf)"
+            position="0 1 0" rotation="0 0 0" scale="0.1 0.1 0.1"
+            animation="property: rotation; dur: 8000; to: 360 0 0; loop: true">
+          </a-entity>
+        </a-marker>
+
+        <a-marker type='pattern' url='https://corinthiablack.github.io/SICB-Poster/patt/pattern-D.patt'>
+          <a-entity geometry="primitive: box" material="shader: flat; color: #4C4C4C" scale="1.25 0 1.25"></a-entity>
+          <a-entity
+              gltf-model="url(https://corinthiablack.github.io/SICB-Poster/models/PC1max.gltf)"
+              position="0 1 0" rotation="0 0 0" scale="0.1 0.1 0.1"
+              animation="property: rotation; dur: 8000; to: 360 0 0; loop: true">
+            </a-entity>
+          </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
